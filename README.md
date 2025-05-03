@@ -39,6 +39,14 @@ npm install -g github-activity-generator
 npm install github-activity-generator
 ```
 
+### Initial Setup:
+
+Before using the tool, create a data file that will be modified for commits:
+
+```bash
+echo {} > data.json
+```
+
 ## 🔧 Usage
 
 ### Command Line Interface (CLI)
@@ -48,15 +56,15 @@ The package provides a simple command-line interface with two main commands:
 #### Option 1: Generate commits for a specific day
 
 ```bash
-github-activity-generator day --date "2023-06-15" --commits 8
+github-activity-generator day --date "2023-06-15" --commits 8 --file-path "./data.json"
 ```
 
-This will create 8 commits on June 15, 2023, distributed throughout the day.
+This will create 8 commits on June 15, 2023, distributed throughout the day.Remember to create a data.json file in your project's root directory to store the data.
 
 #### Option 2: Generate commits for a date range
 
 ```bash
-github-activity-generator range --start-date "2023-06-01" --end-date "2023-06-30" --max-commits 5
+github-activity-generator range --start-date "2023-06-01" --end-date "2023-06-30" --max-commits 5 --file-path "./custom-data.json"
 ```
 
 This will create random commits (0-5 per day) for each day from June 1 to June 30, 2023.
@@ -177,6 +185,8 @@ github-activity-generator day --date "2023-12-25" --commits 10
 - This tool requires a git repository to work
 - The repository should be connected to a remote (GitHub)
 - You should have proper authentication set up for pushing to the remote
+- **You must create the data.json file (or your custom file specified with --file-path) before running the commands**
+- The data file should be a valid JSON file, even if empty (you can create it with `echo {} > data.json`)
 - GitHub's terms of service may have policies about artificially manipulating contribution graphs
 - This tool is intended for educational purposes
 
