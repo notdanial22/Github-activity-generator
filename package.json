@@ -1,0 +1,39 @@
+{
+  "name": "github-activity-generator",
+  "version": "1.0.0",
+  "description": "Generate GitHub activity with backdated commits",
+  "main": "src/index.js",
+  "bin": {
+    "github-activity-generator": "src/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github",
+    "activity",
+    "commits",
+    "contribution",
+    "graph"
+  ],
+  "author": "Muhammad Danial",
+  "license": "MIT",
+  "dependencies": {
+    "@faker-js/faker": "^8.0.0",
+    "jsonfile": "^6.1.0",
+    "moment": "^2.29.4",
+    "simple-git": "^3.19.0",
+    "yargs": "^17.7.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notdanial22/Github-activity-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/notdanial22/Github-activity-generator/issues"
+  },
+  "homepage": "https://github.com/yourusername/Github-activity-generator#readme"
+}
